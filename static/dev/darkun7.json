@@ -1,0 +1,51 @@
+{
+    "name": "Hartawan Bahari Mulyadi",
+    "region": "Jawa Timur",
+    "description": "<b>Hello</b> it's me",
+    "picture": "1cFuSU0LrV-SdSM_l-qaCKaHPMymlzHwJ",
+    "social": {
+        "facebook": "https://www.facebook.com/hartawan.bahari.7",
+        "github": "https://github.com/darkun7",
+        "twitter": "#",
+        "instagram": "https://www.instagram.com/htw.7/",
+        "linkedin": "https://www.linkedin.com/in/hartawan-bahari",
+        "primary_contact": "https://www.linkedin.com/in/hartawan-bahari"
+    },
+    "top_skill":[
+        "Cloud Computing", "Backend", "Frontend"
+    ],
+    "project": {
+        "IT-Convert": {
+            "type": "Website",
+            "meta": "",
+            "img": "1OY6bJzBZX8RD8fNc20XGSdlSI1qeftBq",
+            "link": "https://itconvert.id/"
+        },
+        "Naraku": {
+            "type": "Website DSS",
+            "meta": "PKM-T",
+            "img": "1q_3JCGxY-2dm6zuUKy_W6gQ6gL0x2IH1",
+            "link": "https://pupuknaraku.com/"
+        },
+        "Task Force": {
+            "type": "Website",
+            "meta": "",
+            "img": "1Fr5hg8-yun1F8ie8NR8akT97aIhIaoG7",
+            "link": "http://taskforce.kulacino.my.id/"
+        },
+        "Finding Legends": {
+            "type": "Edu-Game",
+            "meta": "Gemastik",
+            "img": "180U2ITP-JahuUct1fwefJZt2hipe67um",
+            "link": "https://www.youtube.com/watch?v=CeNCVHNhIdc"
+        },
+        "DNA Assemble": {
+            "type": "Edu-Game",
+            "meta": "Alibaba Challenge",
+            "img": "1nC4Sa7bnyOYJlldcT180SdwpoVFRyjLY",
+            "link": "http://paham-dna.kulacino.my.id/"
+        }
+        
+        
+    }
+}

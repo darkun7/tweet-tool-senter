@@ -1,0 +1,112 @@
+{% extends 'base.html' %}
+
+{% block title %} {{ data['name'] }} {% endblock %}
+
+{% block content %}
+<div class="page-wrapper">
+        <div class="container">
+            <ol class="breadcrumb">
+                <li><a href="#">Pengembang</a></li>
+                <li class="active">{{ data['name'] }}</li>
+            </ol>
+            <div class="row">
+                <!--end col-md-3-->
+                <div class="col-md-12">
+                    <div class="quick-navigation" data-fixed-after-touch="">
+                        <div class="wrapper">
+                            <ul>
+                                <li><a href="#profil" class="scroll">Profil</a></li>
+                                <li><a href="#project" class="scroll">Proyek</a>({{ data['project']|length }})</li>
+                                <li><a href="#top-skill" class="scroll">Skill</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="main-content">
+                        <div class="title box background-color-white" id="profil">
+                            <div class="left">
+                                <div class="row" style="padding-left: 25px">
+                                    <h1>{{ data['name'] }}</h1>
+                                    <h3><a href="#profil">{{ data['region'] }}</a></h3>
+                                    <div style="display:inline-block;vertical-align:top;">
+                                        <img class="dev-pict" src="{{ drive_image(data['picture']) }}" alt="img"/>
+                                    </div>
+                                    <div style="display:inline-block;margin-left:15px;">
+                                        <p>{{ data['description'] |safe }}
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="right">
+                                <a href="{{ data['social']['primary_contact'] }}" class="btn btn-primary btn-rounded scroll">Kontak</a>
+                                <a href="{{ data['social']['facebook'] }}" target="_blank">
+                                    <i class="sosmed fa fa-2x fa-facebook"></i>
+                                </a>
+                                <a href="{{ data['social']['instagram'] }}" target="_blank">
+                                    <i class="sosmed fa fa-2x fa-instagram"></i>
+                                </a>
+                                <a href="{{ data['social']['twitter'] }}" target="_blank">
+                                    <i class="sosmed fa fa-2x fa-twitter"></i>
+                                </a>
+                                <a href="{{ data['social']['linkedin'] }}" target="_blank">
+                                    <i class="sosmed fa fa-2x fa-linkedin"></i>
+                                </a>
+                                <a href="{{ data['social']['github'] }}" target="_blank">
+                                    <i class="sosmed fa fa-2x fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="row" id="project">
+                            <h2 class="text-center">Proyek</h2>
+                            <div class="col-md-12 col-sm-9">
+                                <div class="row">
+                                    {%for title in data['project']%}
+                                    <div class="col-md-3 col-sm-6">
+                                        <a href="{{ data['project'][title]['link'] }}" target="_blank" class="item small">
+                                            <div class="image">
+                                                <div class="info">
+                                                    <figure class="label label-info">{{ data['project'][title]['type'] }}</figure>
+                                                    <aside>
+                                                        <h3>{{ title }}</h3>
+                                                        <figure class="location">{{ data['project'][title]['meta'] }}</figure>
+                                                    </aside>
+                                                </div>
+                                                <div class="wrapper">
+                                                    <div class="gallery">
+                                                        <img class="p-image" src="{{ drive_image(data['project'][title]['img']) }}"alt="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    {%endfor%}
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <section id="top-skill">
+                                <h2 class="text-center">Top {{ data['top_skill']|length }} Skill</h2>
+                                <div class="row">
+                                    {%for skill in data['top_skill']%}
+                                        <div class="col-md-4 col-sm-4">
+                                            <div class="feature">
+                                                <aside class="circle">
+                                                    <i class="icon_box-checked"></i>
+                                                </aside>
+                                                <figure>
+                                                    <h3>{{ skill }}</h3>
+                                                </figure>
+                                            </div>
+                                        </div>
+                                    {%endfor%}
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="ThemeStarz">
+
+    <link href="{{ url_for('static', filename='fonts/font-awesome.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ url_for('static', filename='fonts/elegant-fonts.css') }}" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,300,700,900,400italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/css/bootstrap.css') }}" type="text/css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/zabuto_calendar.min.css') }}" type="text/css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/owl.carousel.css') }}" type="text/css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/overload.css') }}" type="text/css">
+
+    <title>{% block title %} {% endblock %} - Senter</title>
+
+</head>
+
+<body>
+<div class="page-wrapper">
+    <div id="page-header">
+        <header>
+            <div class="container">
+                <div class="primary-nav">
+                    <div class="left">
+                        <a href="/" id="brand">
+                            <object class="logo" type="image/svg+xml" data="{{ url_for('static', filename='img/logo.svg') }}"></object>
+                        <a class="nav-trigger" data-toggle="collapse" href="#primary-nav" aria-expanded="false" aria-controls="primary-nav"><i class="fa fa-navicon"></i></a>
+                    </div>
+                    <!--end left-->
+                    <div class="right" >
+                        <nav id="primary-nav">
+                            <ul>
+                                <li class="active"><a href="/">Beranda</a></li>
+                                <li><a href="/about">Tentang</a></li>
+                                <li>
+                                    <a href="#" class="has-child">Pengembang</a>
+                                    <ul class="child-nav">
+                                        <li><a href="/team/ekodavidkurnia">Eko David Kurniawan</a></li>
+                                        <li><a href="/team/darkun7">Hartawan Bahari Mulyadi</a></li>
+                                        <li><a href="/team/ariPrima">Ari Prima Pandiangan</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav>
+                        <!--end nav-->
+                    </div>
+                    <!--end right-->
+                </div>
+                <!--end primary-nav-->
+            </div>
+            <!--end container-->
+        </header>
+        <!--end header-->
+    </div>
+    <!--end page-header-->
+
+    <div id="page-content">
+        {% block content %} {% endblock %}
+    </div>
+    <!--end page-content-->
+
+    <footer id="page-footer">
+        <div class="row-one">
+            <div class="container">
+                <div class="logos">
+                    <div class="logo">
+                        <a href="https://spadadikti.id/"><img src="https://beasiswadosen.kemdikbud.go.id/v2/assets/frontend/img/logo-dikti-sigap.png"alt=""></a>
+                    </div>
+                    <div class="logo">
+                        <a href="https://kampusmerdeka.kemdikbud.go.id/"><img src="https://www.maranatha.edu/wp-content/uploads/2020/11/logo-kampus-merdeka.png"alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--end row-one-->
+        <div class="row-two clearfix">
+            <div class="container">
+                <div class="copyright pull-left">&copy; 2021 Team 7 - UGM 02</div>
+                <div class="footer-nav pull-right">
+                    <a href="/">Beranda</a>
+                    <a href="/about">Tentang</a>
+                    <a href="https://github.com/darkun7/tweet-tool-senter" target="_blank">
+                        <i class="fa fa-github"></i> Repository</a>
+                </div>
+            </div>
+            <div class="bg-transfer"><img src="{{ url_for('static', filename='img/footer-bg.jpg') }}"alt=""></div>
+        </div>
+        <!--end row-two-->
+    </footer>
+    <!--end page-footer-->
+</div>
+<!--end page-wrapper-->
+<a href="#page-header" class="to-top scroll" data-show-after-scroll="600"><i class="arrow_up"></i></a>
+
+
+
+<script type="text/javascript" src="{{ url_for('static', filename='js/jquery-2.2.1.min.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/jquery-migrate-1.2.1.min.js') }}"></script>
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&libraries=places"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/infobox.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/markerclusterer_packed.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/richmarker-compiled.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/markerwithlabel_packed.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='bootstrap/js/bootstrap.min.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/jquery.validate.min.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap-datepicker.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/icheck.min.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/owl.carousel.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/masonry.pkgd.min.js') }}"></script>
+
+<script type="text/javascript" src="{{ url_for('static', filename='js/maps.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/custom.js') }}"></script>
+
+
+<script>
+    var _latitude = 48.47292127;
+    var _longitude = 4.28672791;
+    var element = "map-item";
+    var useAjax = true;
+    bigMap(_latitude,_longitude, element, useAjax);
+</script>
+</body>

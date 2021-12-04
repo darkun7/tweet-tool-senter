@@ -1,0 +1,26 @@
+{
+    "name": "Eko David Kurniawan",
+    "region": "Daerah asal",
+    "description": "Deskripsi",
+    "picture": "id googledrive file",
+    "social": {
+        "facebook": "https://www.facebook.com/",
+        "github": "https://github.com/ariPrima",
+        "twitter": "https://twitter.com/",
+        "instagram": "https://www.instagram.com/",
+        "linkedin": "https://www.linkedin.com/in/",
+        "primary_contact": "#"
+    },
+    "top_skill":[
+        "A", "B"
+    ],
+    "project": {
+        "Judul Porto": {
+            "type": "Website",
+            "meta": "",
+            "img": "id googledrive file",
+            "link": "#"
+        }
+        
+    }
+}
