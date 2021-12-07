@@ -1,2 +1,4 @@
 .vercel
 *.pyc
+static/wordcloud/*
+.env

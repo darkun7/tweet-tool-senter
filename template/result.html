@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+
+{% block title %} Index {% endblock %}
+
+{% block js %}
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+{% endblock %}
+
+{% block content %}
+<div class="hero-section" data-height="600">
+    {% include 'include/search-form.html' %}
+    <!-- style="height:auto" -->
+    <div class="map-wrapper">
+        <div class="plate white">
+            <a href="#" data-switch="#form-hero" id="show-res">Tampilkan Pencarian</a>
+        </div>
+        <div class="map height-100 text-center">
+            <!-- <h3>Hasil analisa sentimen tweet</h3>
+            <p>Diperoleh data sebanyak : {{ res.total }} Tweet</p> -->
+        </div>
+    </div>
+</div>
+<div class = "container text-center">
+    <div class="map height-100 text-center">
+        <h3>Hasil analisa sentimen tweet</h3>
+        <p>Diperoleh data sebanyak : {{ res.total }} Tweet</p>
+    </div>
+    <div class = "row">
+        {% if res['visual']['sna'] == 'on' %}
+        <div class="col-md-12">
+           <h2>Social Network Analysis </h2>
+           {{ res['sna'] |safe }}
+        </div>
+        {% endif %}
+        {% if res['visual']['pie'] == 'on' %}
+        <div class="col-md-6">
+           <h2>Sentiment Analysis </h2> 
+           {{ res['sa'] |safe }}
+        </div>
+        {% endif %}
+        {% if res['visual']['wc'] == 'on' %}
+        <div class="col-md-6">
+            <h2>WordCloud </h2> 
+            <img src="{{ url_for('static', filename=res['wc']) }}" width="600" height="400">
+        </div>
+        {% endif %}
+        {% if res['visual']['tab'] == 'on' %}
+        <div class="col-md-12">
+            {{ res['snatab'] |safe }}
+        </div>
+        {% endif %}
+    </div>
+</div>
+
+{% include 'include/home-content.html' %}
+{% endblock %}
+
+{% block scripts %}
+<script>
+    $('#show-res').trigger('click');
+</script>
+{% endblock %}

@@ -4,16 +4,19 @@
 <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="ThemeStarz">
+    <meta name="author" content="Darkun7">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='img/favicon.ico') }}">
 
     <link href="{{ url_for('static', filename='fonts/font-awesome.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ url_for('static', filename='fonts/elegant-fonts.css') }}" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Lato:400,300,700,900,400italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/css/bootstrap.css') }}" type="text/css">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/zabuto_calendar.min.css') }}" type="text/css">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/owl.carousel.css') }}" type="text/css">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/overload.css') }}" type="text/css">
+    {% block styles %} {% endblock %}
+    {% block js %} {% endblock %}
 
     <title>{% block title %} {% endblock %} - Senter</title>
 
@@ -97,14 +100,8 @@
 <a href="#page-header" class="to-top scroll" data-show-after-scroll="600"><i class="arrow_up"></i></a>
 
 
-
 <script type="text/javascript" src="{{ url_for('static', filename='js/jquery-2.2.1.min.js') }}"></script>
 <script type="text/javascript" src="{{ url_for('static', filename='js/jquery-migrate-1.2.1.min.js') }}"></script>
-<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&libraries=places"></script>
-<script type="text/javascript" src="{{ url_for('static', filename='js/infobox.js') }}"></script>
-<script type="text/javascript" src="{{ url_for('static', filename='js/markerclusterer_packed.js') }}"></script>
-<script type="text/javascript" src="{{ url_for('static', filename='js/richmarker-compiled.js') }}"></script>
-<script type="text/javascript" src="{{ url_for('static', filename='js/markerwithlabel_packed.js') }}"></script>
 <script type="text/javascript" src="{{ url_for('static', filename='bootstrap/js/bootstrap.min.js') }}"></script>
 <script type="text/javascript" src="{{ url_for('static', filename='js/jquery.validate.min.js') }}"></script>
 <script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap-datepicker.js') }}"></script>
@@ -112,15 +109,6 @@
 <script type="text/javascript" src="{{ url_for('static', filename='js/owl.carousel.js') }}"></script>
 <script type="text/javascript" src="{{ url_for('static', filename='js/masonry.pkgd.min.js') }}"></script>
 
-<script type="text/javascript" src="{{ url_for('static', filename='js/maps.js') }}"></script>
 <script type="text/javascript" src="{{ url_for('static', filename='js/custom.js') }}"></script>
-
-
-<script>
-    var _latitude = 48.47292127;
-    var _longitude = 4.28672791;
-    var element = "map-item";
-    var useAjax = true;
-    bigMap(_latitude,_longitude, element, useAjax);
-</script>
+{% block scripts %} {% endblock %}
 </body>
