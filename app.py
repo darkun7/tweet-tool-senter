@@ -1,14 +1,19 @@
 import os
-from flask import Flask, render_template, request, json
+from flask import Flask, render_template, request, json, send_from_directory
 import ml
 
-app = Flask(__name__, template_folder='template', static_url_path = "/assets",)
+app = Flask(__name__, template_folder='template')
 
 @app.context_processor
 def utility_processor():
     def drive_image(ids):
         return 'https://drive.google.com/uc?export=view&id='+ids
     return dict(drive_image=drive_image)
+
+@app.route('/favicon.ico')
+def favicon():
+    return send_from_directory(os.path.join(app.root_path, 'static'),
+                               'img/favicon.ico', mimetype='image/vnd.microsoft.icon')
 
 @app.route("/")
 def landingPage():

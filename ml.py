@@ -1,3 +1,4 @@
+from flask import render_template
 import pandas as pd
 import numpy as np
 import tweepy
@@ -38,10 +39,12 @@ from plotly.offline import download_plotlyjs, plot
 import plotly.figure_factory as ff
 
 def main(request):
-  keywords = request.form["keywords"]
-  tnum =request.form["tnum"]
+  keywords = request.form.get("keywords")
+  if keywords is None:
+    return render_template("index.html")
+  tnum =request.form.get("tnum")
   if int(tnum) > 1000:
-      tnum = 1000
+    tnum = 1000
 
   # Call twitter api keys
   consumer_key = environ.get('TW_CONSUMER_KEY')
