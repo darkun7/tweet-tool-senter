@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/css/bootstrap.css') }}" type="text/css">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/owl.carousel.css') }}" type="text/css">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/loading.css') }}" type="text/css">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/overload.css') }}" type="text/css">
     {% block styles %} {% endblock %}
     {% block js %} {% endblock %}
@@ -60,7 +61,7 @@
         <!--end header-->
     </div>
     <!--end page-header-->
-
+    {% include 'include/loading.html' %}
     <div id="page-content">
         {% block content %} {% endblock %}
     </div>

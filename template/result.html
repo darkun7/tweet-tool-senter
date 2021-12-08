@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 
-{% block title %} Index {% endblock %}
+{% block title %} Hasil Pencarian {% endblock %}
 
 {% block js %}
 <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
@@ -58,5 +58,8 @@
 {% block scripts %}
 <script>
     $('#show-res').trigger('click');
+    $('#btn-analyze').click(function(){
+        $('.tetrominos').show();
+    });
 </script>
 {% endblock %}

@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 
-{% block title %} Index {% endblock %}
+{% block title %} Beranda {% endblock %}
 
 {% block content %}
 <div class="hero-section" data-height="600">
@@ -23,5 +23,8 @@
 {% block scripts %}
 <script>
     $('#show-res').trigger('click');
+    $('#btn-analyze').click(function(){
+        $('.tetrominos').show();
+    });
 </script>
 {% endblock %}
