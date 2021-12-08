@@ -35,6 +35,7 @@ from collections import Counter
 import networkx as nx
 from networkx.readwrite import json_graph
 from plotly.offline import download_plotlyjs, plot
+import plotly.figure_factory as ff
 
 def main(request):
   keywords = request.form["keywords"]
