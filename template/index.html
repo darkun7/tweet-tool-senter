@@ -4,171 +4,24 @@
 
 {% block content %}
 <div class="hero-section" data-height="600">
-    <form id="form-hero">
-        <div class="hero-inner">
-            <div class="hero-wrapper" >
-                <div class="caption">
-                    <div class="inner">
-                        <div class="container">
-                            <h1 class="center">Know Public Opinion</h1>
-                            <div class="row no-gutters">
-                                <div class="col-md-8 col-sm-6">
-                                    <div class="form-group">
-                                        <label class="label-on-input" for="address-autocomplete">Kata Kunci</label>
-                                        <input type="text" class="form-control" id="address-autocomplete" name="location" placeholder="Masukkan Topik">
-                                    </div>
-                                </div>
-                                <div class="col-md-2 col-sm-2">
-                                    <div class="form-group">
-                                        <label class="label-on-input" for="form-nights">Tweet</label>
-                                        <input type="number" class="form-control" id="form-nights" name="nights" placeholder="1000" 
-                                        value="1000" min="100" max="2500">
-                                    </div>
-                                </div>
-                                <div class="col-md-2 col-sm-2">
-                                    <div class="form-group">
-                                        <button type="submit" class="btn btn-default">Identifikasi</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="bg-transfer"><img src="{{ url_for('static', filename='img/bg-hero.jpg') }}"alt=""></div>
-                    </div>
-                </div>
-                <div class="options">
-                    <div class="container">
-                        <div class="wrapper">
-                            <h2>Pengaturan</h2>
-                            <div class="row">
-                                <div class="col-md-12 col-sm-9">
-                                    <ul class="checkboxes inline list-unstyled">
-                                        <li><label><input type="checkbox" name="a">a</label></li>
-                                        <li><label><input type="checkbox" name="b">b</label></li>
-                                        <li><label><input type="checkbox" name="c">c</label></li>
-                                        <li><label><input type="checkbox" name="d">d</label></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id="options-hidden" class="collapse">
-                <div class="container">
-                    <div class="wrapper">
-                        <h2>Pengaturan Lanjutan</h2>
-                        <div class="row">
-                            <div class="col-md-12 col-sm-9">
-                                <ul class="checkboxes inline">
-                                    <li><label><input type="checkbox" name="e">e</label></li>
-                                    <li><label><input type="checkbox" name="f">f</label></li>
-                                    <li><label><input type="checkbox" name="g">g</label></li>
-                                    <li><label><input type="checkbox" name="h">h</label></li>
-                                </ul>
-                            </div>
-                            <div class="col-md-4"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="plate">
-            <a data-toggle="collapse" href="#options-hidden" aria-expanded="false" aria-controls="options-hidden">View Further Options</a>
-        </div>
-    </form>
+    {% include 'include/search-form.html' %}
 
     <div class="map-wrapper">
         <div class="plate white">
-            <a href="#" data-switch="#form-hero">Tampilkan Hasil</a>
+            <a href="#" data-switch="#form-hero" id="show-res">Tampilkan Hasil</a>
         </div>
-        <div class="map height-100">
-            Nanti hasilnya disini
+        <div class="map height-100 text-center">
+            <h3>Perhatian</h3>
+            <p>Masukkan kata kunci untuk menampilkan hasil</p>
         </div>
     </div>
 </div>
 
-<div class="block">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4 col-sm-4">
-                <div class="feature">
-                    <aside class="circle">
-                        <i class="icon_house_alt"></i>
-                    </aside>
-                    <figure>
-                        <h3>200+ Anu</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum luctus posuere mattis.
-                            Donec id nulla nisl.
-                        </p>
-                    </figure>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-4">
-                <div class="feature">
-                    <aside class="circle">
-                        <i class="icon_box-checked"></i>
-                    </aside>
-                    <figure>
-                        <h3>Itu</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum luctus posuere mattis.
-                            Donec id nulla nisl.
-                        </p>
-                    </figure>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-4">
-                <div class="feature">
-                    <aside class="circle">
-                        <i class="icon_headphones"></i>
-                    </aside>
-                    <figure>
-                        <h3>Apawes</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum luctus posuere mattis.
-                            Donec id nulla nisl.
-                        </p>
-                    </figure>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="space"></div>
-</div>
+{% include 'include/home-content.html' %}
+{% endblock %}
 
-
-<div class="container">
-    <div class="block">
-        <form class="marketing-form">
-            <div class="row">
-                <div class="col-md-10 col-md-offset-1">
-                    <div class="form-group-inline vertical-align-middle no-margin">
-                        <div class="form-group">
-                            <h3 class="font-color-white no-margin"> Title</h3>
-                            <p class="font-color-white no-margin">Desc</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </form>
-        <div class="bg color default"></div>
-    </div>
-</div>
-
-<div class="container">
-    <div class="block">
-        <div class="title">
-            <h2>Title</h2>
-            <div class="row">
-                <div class="col-md-3 col-sm-3">
-                    <div class="review-single">
-                        <a href="detail.html#reviews"><h3>Card title</h3></a>
-                        <p>Donec bibendum at neque pellentesque viverra. Fusce rhoncus elementum commodo.
-                            In ac nibh nec turpis finibus eleme
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="bg color white"></div>
-    </div>
-</div>
+{% block scripts %}
+<script>
+    $('#show-res').trigger('click');
+</script>
 {% endblock %}
