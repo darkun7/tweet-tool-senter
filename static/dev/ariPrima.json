@@ -12,15 +12,7 @@
         "primary_contact": "#"
     },
     "top_skill":[
-        "A", "B"
+        "Mobile Programming"
     ],
-    "project": {
-        "Judul Porto": {
-            "type": "Website",
-            "meta": "",
-            "img": "#",
-            "link": "#"
-        }
-
-    }
+   
 }
