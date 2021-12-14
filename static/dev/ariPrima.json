@@ -1,26 +1,18 @@
 {
     "name": "Ari Prima Pandiangan",
-    "region": "Daerah asal",
-    "description": "Deskripsi",
-    "picture": "id googledrive file",
+    "region": "Sumatera Utara",
+    "description": "Yes...",
+    "picture": "#",
     "social": {
-        "facebook": "https://www.facebook.com/",
+        "facebook": "#",
         "github": "https://github.com/ariPrima",
-        "twitter": "https://twitter.com/",
-        "instagram": "https://www.instagram.com/",
-        "linkedin": "https://www.linkedin.com/in/",
+        "twitter": "#",
+        "instagram": "#",
+        "linkedin": "#",
         "primary_contact": "#"
     },
     "top_skill":[
-        "A", "B"
+        "Mobile Programming"
     ],
-    "project": {
-        "Judul Porto": {
-            "type": "Website",
-            "meta": "",
-            "img": "id googledrive file",
-            "link": "#"
-        }
-
-    }
+    "project": {}
 }

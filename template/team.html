@@ -27,12 +27,14 @@
                                 <div class="row" style="padding-left: 25px">
                                     <h1>{{ data['name'] }}</h1>
                                     <h3><a href="#profil">{{ data['region'] }}</a></h3>
-                                    <div style="display:inline-block;vertical-align:top;">
-                                        <img class="dev-pict" src="{{ drive_image(data['picture']) }}" alt="img"/>
-                                    </div>
-                                    <div style="display:inline-block;margin-left:15px;">
-                                        <p>{{ data['description'] |safe }}
-                                        </p>
+                                    <div class="row">
+                                        <div class="col">
+                                            <img class="dev-pict" src="{{ drive_image(data['picture']) }}" alt="img"/>
+                                        </div>
+                                        <div class="col">
+                                            <p>{{ data['description'] |safe }}
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
