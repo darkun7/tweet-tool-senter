@@ -1,25 +1,49 @@
 {
     "name": "Eko David Kurniawan",
-    "region": "Daerah asal",
-    "description": "Deskripsi",
-    "picture": "id googledrive file",
+    "region": "Jawa Tengah",
+    "description": "Yummy..",
+    "picture": "1GdKIIhKUj2r2dkwZywd_KEmatfe0TjsL",
     "social": {
-        "facebook": "https://www.facebook.com/",
-        "github": "https://github.com/ariPrima",
-        "twitter": "https://twitter.com/",
-        "instagram": "https://www.instagram.com/",
-        "linkedin": "https://www.linkedin.com/in/",
-        "primary_contact": "#"
+        "facebook": "#",
+        "github": "https://github.com/ekodavidkurnia",
+        "twitter": "#",
+        "instagram": "https://www.instagram.com/edavidkurnia",
+        "linkedin": "https://www.linkedin.com/in/eko-david-kurniawan",
+        "primary_contact": "https://www.linkedin.com/in/eko-david-kurniawan"
     },
     "top_skill":[
-        "A", "B"
+        "Deep Learning", "Machine Learning", "Tableau"
     ],
     "project": {
-        "Judul Porto": {
+        "Angkat Tani": {
             "type": "Website",
             "meta": "",
-            "img": "id googledrive file",
-            "link": "#"
+            "img": "1-5oPH3NLFhVV4prp11o2-ZDWpKKXamZB",
+            "link": "https://angkat-tani-40404.et.r.appspot.com/"
+        },
+        "Boiler O2 Predictor": {
+            "type": "Website",
+            "meta": "",
+            "img": "1EtcR8_PU2lvnWuTJB4GUnvg_WT2DrWvL",
+            "link": "https://o2-boiler-prediction.herokuapp.com/"
+        },
+        "Geota Class": {
+            "type": "Tech",
+            "meta": "PKM-T",
+            "img": "1X7LdBNX0Y2j3xx4suPxx-_u6dyWg7Gen",
+            "link": "https://www.youtube.com/watch?v=hdOkW9pAtIs&t=291s"
+        },
+        "Covid-19 Chest XRays": {
+            "type": "",
+            "meta": "",
+            "img": "1zUHP0qfN5BQstlzqdFcMWOON3MlMhII4",
+            "link": "https://github.com/ekodavidkurnia/AI-Assistant-Lecturer-2021/blob/master/Chest_X_Ray_Dataset.ipynb"
+        },
+        "101 Food Classification": {
+            "type": "",
+            "meta": "",
+            "img": "12ffEHjZmjTn0YrBNSPWxQKPgEPbnhGxu",
+            "link": "https://github.com/ekodavidkurnia/AI-Assistant-Lecturer-2021/blob/master/Transfer%20Learning/04_3_Transfer_Learning_Scale_Up.ipynb"
         }
         
     }
