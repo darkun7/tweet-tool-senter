@@ -1,6 +1,6 @@
 import os
 from flask import Flask, render_template, request, json, send_from_directory
-import ml
+import backend as ml
 
 app = Flask(__name__, template_folder='template')
 

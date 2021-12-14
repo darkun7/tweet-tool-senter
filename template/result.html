@@ -20,12 +20,12 @@
         </div>
     </div>
 </div>
-<div class = "container text-center">
+<div class="container text-center">
     <div class="map height-100 text-center">
-        <h3>Hasil analisa sentimen tweet</h3>
+        <h3 id="result-ctx">Hasil analisa sentimen tweet</h3>
         <p>Diperoleh data sebanyak : {{ res.total }} Tweet</p>
     </div>
-    <div class = "row">
+    <div class="row">
         {% if res['visual']['sna'] == 'on' %}
         <div class="col-md-12">
            <h2>Social Network Analysis </h2>
