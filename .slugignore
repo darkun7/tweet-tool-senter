@@ -1,4 +1,2 @@
-.vercel
 *.pyc
-.env
 static/wordcloud/*.png
