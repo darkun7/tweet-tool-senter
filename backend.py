@@ -192,7 +192,8 @@ def main(request):
     df['tweet_preprocessed'] = df['tweets'].apply(processTweet)
     factory = StopWordRemoverFactory()
     stopwords = factory.get_stop_words()
-    nltk.download('stopwords')
+    # This code disabled due deployment apps only need run once while build
+    # nltk.download('stopwords')
     from nltk.corpus import stopwords
     listStopwords = set(stopwords.words('indonesian'))
     listStopwords = list(listStopwords)
