@@ -42,8 +42,8 @@ def main(request):
     if keywords is None:
         return render_template("index.html")
     jumlah =request.form.get("tnum")
-    if int(jumlah) > 1000:
-        jumlah = 1000
+    if int(jumlah) > 80:
+        jumlah = 80
     tanggal = int(request.form['date'])
     
     epochtime = time.localtime()
@@ -78,10 +78,11 @@ def main(request):
     today = datetime.now()    
     n_days_ago = today - timedelta(days=tanggal)
     tgl = n_days_ago.strftime("%Y-%m-%d")
-    print(keywords,'============key')
+    
     data = client.get_recent_tweets_count(query=keywords,start_time=tgl+"T"+jam+":00Z")
     count=0
     message,retweet_count,retweet,created_at,user_name,user_id,type_re=[],[],[],[],[],[],[]
+
     for i in data.data:
         try:
             if i['tweet_count'] >= 100:
@@ -148,7 +149,7 @@ def main(request):
                     user_name.append(user.username)
                     created_at.append(i.data['created_at'])
             count += len(tweets.data)
-            print(count)
+
             if count > int(jumlah):
                 break
         except:
